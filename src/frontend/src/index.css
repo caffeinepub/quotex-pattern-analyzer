@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 200 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* Dark trading theme tokens */
+    --background: 0.13 0.038 250;
+    --foreground: 0.93 0.022 260;
+    --card: 0.17 0.042 250;
+    --card-foreground: 0.93 0.022 260;
+    --popover: 0.19 0.044 250;
+    --popover-foreground: 0.93 0.022 260;
+    --primary: 0.58 0.22 278;
+    --primary-foreground: 0.98 0 0;
+    --secondary: 0.24 0.046 250;
+    --secondary-foreground: 0.93 0.022 260;
+    --muted: 0.19 0.044 250;
+    --muted-foreground: 0.68 0.038 248;
+    --accent: 0.58 0.22 278;
+    --accent-foreground: 0.98 0 0;
+    --destructive: 0.63 0.23 26;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.24 0.046 250;
+    --input: 0.22 0.044 250;
+    --ring: 0.58 0.22 278;
+    --success: 0.72 0.19 145;
+    --success-foreground: 0.98 0 0;
+    --warning: 0.76 0.18 78;
+    --warning-foreground: 0.15 0 0;
+    --chart-1: 0.58 0.22 278;
+    --chart-2: 0.72 0.19 145;
+    --chart-3: 0.63 0.23 26;
+    --chart-4: 0.76 0.18 78;
+    --chart-5: 0.68 0.038 248;
+    --sidebar: 0.17 0.042 250;
+    --sidebar-foreground: 0.93 0.022 260;
+    --sidebar-primary: 0.58 0.22 278;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.24 0.046 250;
+    --sidebar-accent-foreground: 0.93 0.022 260;
+    --sidebar-border: 0.24 0.046 250;
+    --sidebar-ring: 0.58 0.22 278;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: oklch(0.17 0.042 250);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.28 0.046 250);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.35 0.046 250);
+  }
+}
